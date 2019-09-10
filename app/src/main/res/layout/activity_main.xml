@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Direct the QR Code to\nthe specified area"
+        android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:alpha="0.7"
+        android:lineSpacingExtra="3dp"
+        android:fontFamily="sans-serif-medium"/>
+
+    <ImageView
+        android:id="@+id/image_flash"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:rotation="-45"
+        android:src="@drawable/ic_flashlight"/>
+
+</RelativeLayout>
