@@ -9,7 +9,7 @@
 ## Installation
 Add the following dependency to your build.gradle
 
-**build.gradle (Project:qr_code_scanner)**
+**build.gradle (Project:QRcodescanner)**
 ```
 repositories {
    jcenter()
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         ButterKnife.bind(this);
 
         ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
+                new String[]{Manifest.permission.CAMERA},
                 101);
 
         mScannerView = new ZXingScannerView(this);
