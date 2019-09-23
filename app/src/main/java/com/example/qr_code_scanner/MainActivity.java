@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         ButterKnife.bind(this);
 
         ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
+                new String[]{Manifest.permission.CAMERA},
                 101);
 
         mScannerView = new ZXingScannerView(this);
@@ -69,12 +69,9 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
         builder.setTitle("Result");
         builder.setMessage(result.getText());
         builder.setCancelable(false);
-        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                mScannerView.startCamera();
-                dialogInterface.dismiss();
-            }
+        builder.setPositiveButton("Ok", (dialogInterface, i) -> {
+            mScannerView.startCamera();
+            dialogInterface.dismiss();
         });
 
         dialog = builder.create();
